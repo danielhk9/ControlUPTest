@@ -1,4 +1,4 @@
-from e2e_test.test_data import EXPECTED_NUMBER_OF_INVENTORY_ITEMS, EXPECTED_CART_COUNT_AFTER_ADDING_ONE_ITEM
+from e2e_test.e2e_test_data import EXPECTED_NUMBER_OF_INVENTORY_ITEMS, EXPECTED_CART_COUNT_AFTER_ADDING_ONE_ITEM
 
 
 def test_get_inventory_number_of_items(driver, login, inventory_setup):

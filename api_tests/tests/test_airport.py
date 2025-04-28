@@ -1,4 +1,4 @@
-from api_tests.test_data import expected_airports, airports_distance, EXPECTED_DISTANCE
+from api_tests.api_test_data import expected_airports, airports_distance, EXPECTED_DISTANCE
 
 
 def test_verify_airport_count(get_airports_data):
