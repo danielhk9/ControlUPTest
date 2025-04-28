@@ -9,3 +9,5 @@ airports_distance = {
     "from": "KIX",
     "to": "NRT"
 }
+
+EXPECTED_DISTANCE = 300

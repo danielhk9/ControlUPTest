@@ -18,7 +18,7 @@ def api_session():
 def get_airports_data(api_session, base_url):
     response = api_session.get(f"{base_url}/airports")
     assert response.status_code == 200, f"Expected 200 but got {response.status_code}"
-    return response.json()
+    return response.json()['data']
 
 
 @pytest.fixture
