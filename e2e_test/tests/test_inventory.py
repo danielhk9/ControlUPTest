@@ -1,6 +1,3 @@
-
-
-from e2e_test.pages.inventory_page import InventoryPage
 from e2e_test.test_data import EXPECTED_NUMBER_OF_INVENTORY_ITEMS, EXPECTED_CART_COUNT_AFTER_ADDING_ONE_ITEM
 
 
