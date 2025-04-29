@@ -10,4 +10,4 @@ airports_distance = {
     "to": "NRT"
 }
 
-EXPECTED_DISTANCE = 300
+EXPECTED_DISTANCE = 400

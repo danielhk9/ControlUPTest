@@ -5,9 +5,9 @@ from e2e_test.pages.base_page import BasePage
 
 class InventoryPage(BasePage):
     INVENTORY_ITEM = (By.CLASS_NAME, "inventory_item")
-    ADD_TO_CART_BUTTON = (By.TAG_NAME, "button")  # inside each item
+    ADD_TO_CART_BUTTON = (By.CSS_SELECTOR, "button.btn_inventory")
     CART_BADGE = (By.CLASS_NAME, "shopping_cart_badge")
-    REMOVE_FROM_CART = (By.ID, "remove-sauce-labs-backpack")
+    REMOVE_FROM_CART = (By.XPATH,  '//button[text()="Remove"]')
 
     def get_inventory_items(self):
         return self.get_elements(self.INVENTORY_ITEM)

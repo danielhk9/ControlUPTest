@@ -13,6 +13,5 @@ class LoginPage(BasePage):
         self.click(self.login_button)
 
     def get_item_after_login(self):
-        el = self.get_element(self.inventory_list)
-        return el
+        return self.get_element(self.inventory_list)
 

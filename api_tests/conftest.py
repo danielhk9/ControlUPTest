@@ -18,7 +18,9 @@ def api_session():
 def get_airports_data(api_session, base_url):
     response = api_session.get(f"{base_url}/airports")
     assert response.status_code == 200, f"Expected 200 but got {response.status_code}"
-    return response.json()['data']
+    response_json = response.json()
+    assert 'data' in response_json, "Response missing 'data' field"
+    return response_json['data']
 
 
 @pytest.fixture
@@ -26,5 +28,5 @@ def post_distance_between_airports(api_session, base_url):
     def _post(data):
         response = api_session.post(f"{base_url}/airports/distance", data=data)
         assert response.status_code == 200, f"Expected 200 but got {response.status_code}"
-        return response.json()
+        return response.json()['data']
     return _post

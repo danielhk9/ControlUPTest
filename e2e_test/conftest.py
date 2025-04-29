@@ -24,7 +24,8 @@ def login(driver):
     login_page = LoginPage(driver)
     login_page.login(USERNAME, PASSWORD)
     inventory_list_el = login_page.get_item_after_login()
-    assert inventory_list_el, "Login failed!"
+    assert inventory_list_el, f"Login failed! Inventory list element was not found. Received: {inventory_list_el}"
+
 
 
 @pytest.fixture
