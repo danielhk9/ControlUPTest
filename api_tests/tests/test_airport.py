@@ -1,12 +1,12 @@
 import logging
-from api_tests.api_test_data import expected_airports, airports_distance, EXPECTED_DISTANCE
+from api_tests.api_test_data import expected_airports, airports_distance, EXPECTED_DISTANCE, EXPECTED_NUMBER_OF_AIRPORTS
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 def test_verify_airport_count(get_airports_data):
     logger.info("Starting validate airport count")
-    assert len(get_airports_data) == 30, f"Expected 30 airports but got {len(get_airports_data)}"
+    assert len(get_airports_data) == EXPECTED_NUMBER_OF_AIRPORTS, f"Expected {EXPECTED_NUMBER_OF_AIRPORTS} airports but got {len(get_airports_data)}"
 
 
 def test_verify_specific_airports(get_airports_data):

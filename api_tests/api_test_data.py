@@ -11,3 +11,4 @@ airports_distance = {
 }
 
 EXPECTED_DISTANCE = 400
+EXPECTED_NUMBER_OF_AIRPORTS = 30

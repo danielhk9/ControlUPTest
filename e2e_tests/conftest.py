@@ -1,9 +1,9 @@
 import pytest
 from selenium import webdriver
 
-from e2e_test.config import USERNAME, PASSWORD, BASE_URL
-from e2e_test.pages.inventory_page import InventoryPage
-from e2e_test.pages.login_page import LoginPage
+from e2e_tests.config import USERNAME, PASSWORD, BASE_URL
+from e2e_tests.pages.inventory_page import InventoryPage
+from e2e_tests.pages.login_page import LoginPage
 
 
 @pytest.fixture(scope="session")

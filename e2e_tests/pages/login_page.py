@@ -1,4 +1,4 @@
-from e2e_test.pages.base_page import BasePage
+from e2e_tests.pages.base_page import BasePage
 from selenium.webdriver.common.by import By
 
 class LoginPage(BasePage):

@@ -1,6 +1,6 @@
 from selenium.webdriver.common.by import By
 
-from e2e_test.pages.base_page import BasePage
+from e2e_tests.pages.base_page import BasePage
 
 
 class InventoryPage(BasePage):
