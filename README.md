@@ -17,10 +17,16 @@ pip install -r requirements.txt
 
 
 To run all api tests:
-pytest api_tests/tests/ -v
+pytest e2e_test/tests/test_inventory.py --log-cli-level=INFO -v 
 
 To run all e2e tests:
 pytest e2e_test/tests/ -v
+
+### To run tests multiple times (repeat mode):
+
+You can run a test multiple times using the --count option from pytest-repeat:
+pytest e2e_test/tests/test_inventory.py --count=20 -v
+
 
 To run a specific test file:
 pytest e2e_test/tests/test_inventory.py -v
