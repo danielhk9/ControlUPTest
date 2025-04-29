@@ -12,11 +12,9 @@ class InventoryPage(BasePage):
     def get_inventory_items(self):
         return self.get_elements(self.INVENTORY_ITEM)
 
-    def add_inventory_item_to_cart_by_index(self, index):
-        items = self.get_inventory_items()
-        add_button = self.find_element_inside(items[index], self.ADD_TO_CART_BUTTON)
+    def add_inventory_item_to_cart_by_index(self, item):
+        add_button = self.find_element_inside(item, self.ADD_TO_CART_BUTTON)
         self.click(element=add_button)
-        return items[index]
 
     def get_cart_item(self):
         return self.get_element(self.CART_BADGE)
