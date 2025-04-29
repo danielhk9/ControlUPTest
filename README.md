@@ -1,4 +1,4 @@
-# AirportGap API and Inventory UI Automation Tests
+# Airport API and Inventory UI Automation Tests
 
 This project contains automated tests built for the exam assignment.
 
@@ -16,26 +16,22 @@ install requirements:
 pip install -r requirements.txt
 
 
-To run all api tests:
-pytest e2e_test/tests/test_inventory.py --log-cli-level=INFO -v 
+To run api tests:
+pytest api_tests/tests/ --log-cli-level=INFO -v 
 
-To run all e2e tests:
-pytest e2e_test/tests/ -v
+To run e2e tests:
+pytest e2e_tests/tests/ -v
 
 ### To run tests multiple times (repeat mode):
 
 You can run a test multiple times using the --count option from pytest-repeat:
-pytest e2e_test/tests/test_inventory.py --count=20 -v
+pytest e2e_tests/tests/test_inventory.py --count=20 -v
 
-
-To run a specific test file:
-pytest e2e_test/tests/test_inventory.py -v
-pytest api_tests/tests/test_airport.py -v
 
 ⚙️ Configuration
 Project configuration (base URLs, credentials, API keys) is located in:
 /api_tests/config.py
-/e2e_test/config.py
+/e2e_tests/config.py
 
 
 
